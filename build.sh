@@ -50,7 +50,7 @@ PIDFile=/var/run/nginx.pid
 ExecStartPre=/usr/local/nginx/sbin/nginx -t
 ExecStart=/usr/local/nginx/sbin/nginx -g "pid /var/run/nginx.pid;"
 ExecReload=/usr/local/nginx/sbin/nginx -s reload
-ExecStop=/bin/kill -s QUIT '$MAINPID'
+ExecStop=/bin/kill -s QUIT \$MAINPID
 PrivateTmp=true
 
 [Install]
