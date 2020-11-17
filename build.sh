@@ -6,7 +6,8 @@ set -euo pipefail
 IFS=$'\n\t'
 
 apt-get install -y sudo
-sudo apt-get install -y \
+SUDO="/usr/bin/sudo"
+"${SUDO}" apt-get install -y \
 	git \
 	build-essential \
 	ffmpeg \
