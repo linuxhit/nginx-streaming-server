@@ -5,11 +5,12 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+export DEBIAN_FRONTEND=noninteractive
+
 apt-get update -y
 apt-get install -y sudo
 
-SUDO="/usr/bin/sudo"
-"${SUDO}" apt-get install -y \
+sudo apt-get install -y \
 	git \
 	build-essential \
 	ffmpeg \
