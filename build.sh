@@ -5,7 +5,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+apt-get update -y
 apt-get install -y sudo
+
 SUDO="/usr/bin/sudo"
 "${SUDO}" apt-get install -y \
 	git \
