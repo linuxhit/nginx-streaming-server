@@ -1,4 +1,4 @@
 FROM ubuntu:20.04
-COPY run.sh /run.sh
-RUN chmod +x ./run.sh 
-RUN /run.sh
+COPY build.sh /build.sh
+RUN chmod +x ./build.sh
+RUN /build.sh
