@@ -6,6 +6,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 export DEBIAN_FRONTEND=noninteractive
+ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
 apt-get update -y
 apt-get install -y sudo
